@@ -3,7 +3,8 @@
 #ifndef BUILDER_H
 #define BUILDER_H
 
-class CourseType {
+class CourseType
+{
   public:
     virtual ~CourseType();
     virtual void MathClass() = 0;
@@ -14,7 +15,8 @@ class CourseType {
     CourseType();
 };
 
-class SeniorClass : public CourseType {
+class SeniorClass : public CourseType
+{
   public:
     SeniorClass();
     ~SeniorClass() override;
@@ -23,7 +25,8 @@ class SeniorClass : public CourseType {
     void ChineseClass() override;
 };
 
-class Director {
+class Director
+{
   public:
     explicit Director(CourseType *ct);
     ~Director();

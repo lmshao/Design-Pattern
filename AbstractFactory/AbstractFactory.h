@@ -35,17 +35,17 @@ class Eagle : public Birds
 
 class Beast
 {
-public:
+  public:
     virtual ~Beast();
     virtual void who() = 0;
 
-protected:
+  protected:
     Beast();
 };
 
 class Wolf : public Beast
 {
-public:
+  public:
     Wolf();
     ~Wolf() override;
     void who() override;
@@ -53,7 +53,7 @@ public:
 
 class Tiger : public Beast
 {
-public:
+  public:
     Tiger();
     ~Tiger() override;
     void who() override;

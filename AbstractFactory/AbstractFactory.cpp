@@ -3,111 +3,136 @@
 #include "AbstractFactory.h"
 #include <iostream>
 
-Birds::Birds() {
+Birds::Birds()
+{
     std::cout << "Birds::Birds()" << std::endl;
 }
 
-Birds::~Birds() {
+Birds::~Birds()
+{
     std::cout << "Birds::~Birds()" << std::endl;
 }
 
-Sparrow::Sparrow() {
+Sparrow::Sparrow()
+{
     std::cout << "Sparrow::Sparrow()" << std::endl;
 }
 
-Sparrow::~Sparrow() {
+Sparrow::~Sparrow()
+{
     std::cout << "Sparrow::~Sparrow()" << std::endl;
 }
 
-void Sparrow::who() {
+void Sparrow::who()
+{
     std::cout << "I am a Sparrow." << std::endl;
 }
 
-Eagle::Eagle() {
+Eagle::Eagle()
+{
     std::cout << "Eagle::Eagle()" << std::endl;
 }
 
-Eagle::~Eagle() {
+Eagle::~Eagle()
+{
     std::cout << "Eagle::~Eagle()" << std::endl;
 }
 
-void Eagle::who() {
+void Eagle::who()
+{
     std::cout << "I am an Eagle." << std::endl;
 }
 
-Beast::Beast() {
+Beast::Beast()
+{
     std::cout << "Beast::Beast()" << std::endl;
 }
 
-Beast::~Beast() {
+Beast::~Beast()
+{
     std::cout << "Beast::~Beast()" << std::endl;
 }
 
-Wolf::Wolf() {
+Wolf::Wolf()
+{
     std::cout << "Wolf::Wolf()" << std::endl;
 }
 
-Wolf::~Wolf() {
+Wolf::~Wolf()
+{
     std::cout << "Wolf::~Wolf()" << std::endl;
 }
 
-void Wolf::who() {
+void Wolf::who()
+{
     std::cout << "I am a Wolf." << std::endl;
 }
 
-Tiger::Tiger() {
+Tiger::Tiger()
+{
     std::cout << "Tiger::Tiger()" << std::endl;
 }
 
-Tiger::~Tiger() {
+Tiger::~Tiger()
+{
     std::cout << "Tiger::~Tiger()" << std::endl;
 }
 
-void Tiger::who() {
+void Tiger::who()
+{
     std::cout << "I am a Tiger." << std::endl;
 }
 
-Hunter::Hunter() {
+Hunter::Hunter()
+{
     std::cout << "Hunter::Hunter()" << std::endl;
 }
 
-Hunter::~Hunter() {
+Hunter::~Hunter()
+{
     std::cout << "Hunter::~Hunter()" << std::endl;
 }
 
-JuniorHunter::JuniorHunter() {
+JuniorHunter::JuniorHunter()
+{
     std::cout << "JuniorHunter::JuniorHunter()" << std::endl;
 }
 
-JuniorHunter::~JuniorHunter() {
+JuniorHunter::~JuniorHunter()
+{
     std::cout << "JuniorHunter::~JuniorHunter()" << std::endl;
 }
 
-Birds *JuniorHunter::huntBirds() {
+Birds *JuniorHunter::huntBirds()
+{
     std::cout << "I caught a sparrow." << std::endl;
-    return  new Sparrow();
+    return new Sparrow();
 }
 
-Beast *JuniorHunter::huntBeast() {
+Beast *JuniorHunter::huntBeast()
+{
     std::cout << "I caught an wolf." << std::endl;
     return new Wolf();
 }
 
-SeniorHunter::SeniorHunter() {
+SeniorHunter::SeniorHunter()
+{
     std::cout << "SeniorHunter::SeniorHunter()" << std::endl;
 }
 
-SeniorHunter::~SeniorHunter() {
+SeniorHunter::~SeniorHunter()
+{
     std::cout << "SeniorHunter::~SeniorHunter()" << std::endl;
 }
 
-Birds *SeniorHunter::huntBirds() {
+Birds *SeniorHunter::huntBirds()
+{
     std::cout << "I caught an eagle." << std::endl;
     return new Eagle();
 }
 
-Beast *SeniorHunter::huntBeast() {
+Beast *SeniorHunter::huntBeast()
+{
     std::cout << "I caught an tiger." << std::endl;
     return new Tiger();
 }
-

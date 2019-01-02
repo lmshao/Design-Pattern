@@ -6,7 +6,7 @@
 
 static Singleton *gInstance = NULL;
 
-Singleton * Singleton::instance()
+Singleton *Singleton::instance()
 {
     if (!gInstance) {
         gInstance = new Singleton();
