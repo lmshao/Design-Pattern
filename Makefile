@@ -1,7 +1,7 @@
 .PHONY:all clean
 
 exclude_dirs := .git
-dirs := $(shell find . -type d -maxdepth 1)
+dirs := $(shell find . -maxdepth 1 -type d)
 dirs := $(basename $(patsubst ./%, %, $(dirs)))
 dirs := $(filter-out $(exclude_dirs), $(dirs))
 
