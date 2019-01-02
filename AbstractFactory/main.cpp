@@ -5,12 +5,16 @@
 int main()
 {
     Hunter *juniorHunter = new JuniorHunter();
-    Birds *birds1 = juniorHunter->whatBirdsToHunt();
+    Birds *birds1 = juniorHunter->huntBirds();
     birds1->who();
+    Beast *beast1 = juniorHunter->huntBeast();
+    beast1->who();
 
     Hunter *seniorHunter = new SeniorHunter();
-    Birds *birds2 = seniorHunter->whatBirdsToHunt();
+    Birds *birds2 = seniorHunter->huntBirds();
     birds2->who();
+    Beast *beast2 = juniorHunter->huntBeast();
+    beast2->who();
 
     delete juniorHunter;
     delete seniorHunter;

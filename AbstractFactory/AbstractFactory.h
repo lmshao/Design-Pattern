@@ -33,6 +33,31 @@ class Eagle : public Birds
     void who() override;
 };
 
+class Beast
+{
+public:
+    virtual ~Beast();
+    virtual void who() = 0;
+
+protected:
+    Beast();
+};
+
+class Wolf : public Beast
+{
+public:
+    Wolf();
+    ~Wolf() override;
+    void who() override;
+};
+
+class Tiger : public Beast
+{
+public:
+    Tiger();
+    ~Tiger() override;
+    void who() override;
+};
 
 //------ What kind of prey can hunters hunt? ------
 
@@ -40,7 +65,8 @@ class Hunter
 {
   public:
     virtual ~Hunter();
-    virtual Birds *whatBirdsToHunt() = 0;
+    virtual Birds *huntBirds() = 0;
+    virtual Beast *huntBeast() = 0;
 
   protected:
     Hunter();
@@ -51,7 +77,8 @@ class JuniorHunter : public Hunter
   public:
     JuniorHunter();
     ~JuniorHunter() override;
-    Birds *whatBirdsToHunt() override;
+    Birds *huntBirds() override;
+    Beast *huntBeast();
 };
 
 class SeniorHunter : public Hunter
@@ -59,7 +86,8 @@ class SeniorHunter : public Hunter
   public:
     SeniorHunter();
     ~SeniorHunter() override;
-    Birds *whatBirdsToHunt() override;
+    Birds *huntBirds() override;
+    Beast *huntBeast();
 };
 
 #endif
