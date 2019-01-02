@@ -78,7 +78,7 @@ class JuniorHunter : public Hunter
     JuniorHunter();
     ~JuniorHunter() override;
     Birds *huntBirds() override;
-    Beast *huntBeast();
+    Beast *huntBeast() override;
 };
 
 class SeniorHunter : public Hunter
@@ -87,7 +87,7 @@ class SeniorHunter : public Hunter
     SeniorHunter();
     ~SeniorHunter() override;
     Birds *huntBirds() override;
-    Beast *huntBeast();
+    Beast *huntBeast() override;
 };
 
 #endif
