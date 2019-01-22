@@ -1,5 +1,5 @@
-#include <iostream>
 #include "Observer.h"
+#include <iostream>
 
 int main()
 {

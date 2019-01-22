@@ -59,4 +59,4 @@ class User : public Subscriber
     Newspaper *_newspaper;
 };
 
-#endif // OBSERVER_H
+#endif  // OBSERVER_H
